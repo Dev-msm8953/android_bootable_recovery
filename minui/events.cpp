@@ -110,7 +110,7 @@ int ev_init(ev_callback input_cb) {
       }
 
       ev_fdinfo[ev_count].fd = fd;
-      ev_fdinfo[ev_count].cb = std::move(input_cb);
+      ev_fdinfo[ev_count].cb = input_cb;
 #ifdef TW_USE_MINUI_WITH_DATA
       ev_fdinfo[ev_count].data = data;
 #endif
